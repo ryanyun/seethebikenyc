@@ -36,11 +36,10 @@ function setMarkers(map) {
       icon: {
         path: google.maps.SymbolPath.CIRCLE,
         scale: 3
-      },
-      title: s[2]
+      }
     });
     var infowindow = new google.maps.InfoWindow({
-      content: "Available Bikes: " + marker.title
+      content: "<p><i class='fa fa-map-marker'></i> " + s[4] + "</p>" + "<h5>" + "Available Bikes: " + s[2] + "</h5>" + "<h5>" + "Available Docks: " + s[3] + "</h5>"
     });
     marker.addListener('mouseover', function() {
       infowindow.open(map, marker);

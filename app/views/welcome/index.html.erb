@@ -1,0 +1,11 @@
+<div id="map"></div>
+<script>
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: {lat: 40.7411, lng: -73.9897}
+    });
+    var bikeLayer = new google.maps.BicyclingLayer();
+    bikeLayer.setMap(map);
+  }
+</script>

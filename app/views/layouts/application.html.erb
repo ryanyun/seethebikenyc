@@ -6,10 +6,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= include_gon %>
-  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&signed_in=true&libraries=visualization" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=visualization" async defer></script>
 </head>
 <body>
-<div class="navbar navbar-default">
+<div id="nav" class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <%= link_to "SeeTheBikeNYC", root_path, {class: "navbar-brand"} %>

@@ -15,6 +15,9 @@ function initMap() {
   heatmap.setMap(map);
   heatmap.set('radius', heatmap.get('radius') ? null : 25);
   setMarkers(map);
+  
+  var nh = window.innerHeight - $('#nav').height();
+  $('#map').height(nh);
 }
 
 function getPoints() {

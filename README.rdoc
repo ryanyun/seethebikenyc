@@ -1,28 +1,11 @@
-== CitiBike NYC
+# CitiBike NYC
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+This is a simple RoR application that utilizes the [Google Maps API](https://developers.google.com/maps/documentation/javascript/) & [CitiBike's Station API](http://www.citibikenyc.com/stations/json) to visualize available bikes in a heat map.
 
-* Ruby version
+## Features
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
++ Available CitiBikes visualized in a heat map.
++ Bicycle lanes are layered on top to easily plan your trips.
++ Hover over a CitiBike station to see exactly how many bikes are available.

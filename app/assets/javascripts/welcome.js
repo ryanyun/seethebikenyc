@@ -1,5 +1,5 @@
 function initMap() {
-  var styling = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#c4ccd6"},{"visibility":"on"}]}]
+  var styling = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#c4ccd6"},{"visibility":"on"}]}]
   var gradient = [
     'rgba(0, 255, 255, 0)',
     'rgba(0, 255, 255, 1)',
@@ -31,6 +31,7 @@ function initMap() {
   heatmap.setMap(map);
   heatmap.set('radius', heatmap.get('radius') ? null : 25);
   heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
+  setMarkers(map);
 }
 
 function getPoints() {
@@ -39,4 +40,27 @@ function getPoints() {
     arr.push(new google.maps.LatLng(c[0], c[1]));
   })
   return arr;
+}
+
+function setMarkers(map) {
+  gon.stations.forEach(function(s) {
+    var marker = new google.maps.Marker({
+      position: {lat: s[0], lng: s[1]},
+      map: map,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 3
+      },
+      title: s[2]
+    });
+    var infowindow = new google.maps.InfoWindow({
+      content: "Available Bikes: " + marker.title
+    });
+    marker.addListener('mouseover', function() {
+      infowindow.open(map, marker);
+    });
+    marker.addListener('mouseout', function() {
+      infowindow.close(map, marker);
+    });
+  }) 
 }

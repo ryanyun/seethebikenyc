@@ -1,4 +1,4 @@
-# CitiBike NYC
+# CitiBikeNYC
 
 ## Description
 
@@ -6,6 +6,10 @@ This is a simple RoR application that utilizes the [Google Maps API](https://dev
 
 ## Features
 
-+ Available CitiBikes visualized in a heat map.
-+ Bicycle lanes are layered on top to easily plan your trips.
++ Instantly see available CitiBikes through beautiful heat map.
++ Plan your trips using the layered bicycle lanes.
 + Hover over a CitiBike station to see exactly how many bikes are available.
+
+## Contribute
+
+Please feel free to contribute to this project.

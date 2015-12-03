@@ -7,10 +7,10 @@ This is a simple RoR application that utilizes the [Google Maps API](https://dev
 ## Screenshots
 
 ![seethebikenyc-1](screenshots/seethebike-1.png "Easily see where available CitiBikes are with heat map")
-"Easily see where available CitiBikes are with heat map"
+Easily see where available CitiBikes are with heat map
 
 ![seethebikenyc-2](screenshots/seethebike-2.png "Hover over a station to see exactly how many bikes and docks are available")
-"Hover over a station to see exactly how many bikes and docks are available"
+Hover over a station to see exactly how many bikes and docks are available
 
 ## Background
 
